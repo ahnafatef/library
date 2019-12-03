@@ -43,7 +43,7 @@ app.get('/bookview', function(req, res){
             return res.status(400).json({msg: 'Couldn\'t fetch database'});
         }
         else {
-            return res.status(200).json()
+            return res.render('bookView', {data: data});
         }
     })
     res.render('bookView');
