@@ -18,18 +18,21 @@
         <thead>
             <tr>
             <th scope="col">#</th>
+            <th scope="col">ID</th>
             <th scope="col">Title</th>
             <th scope="col">Author</th>
             <th scope="col">Rating</th>
             </tr>
         </thead>
         <tbody>
-            <% books.forEach(function(item){ %>
+            <% books.forEach(function(item, count){ %>
                 <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row"><%= count+1 %></th>
+                <td><%= item._id %></td>
+                <td><%= item.title %></td>
+                <td><%= item.title %></td>
+                <td><%= item.author %></td>
+                <td><%= item.rating %></td>
                 </tr>
             <% }) %>
         </tbody>

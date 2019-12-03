@@ -46,7 +46,6 @@ app.get('/bookview', function(req, res){
             return res.render('bookView', {books: data});
         }
     })
-    res.render('bookView');
 })
 
 app.listen(3000, 'localhost', function(){
