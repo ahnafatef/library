@@ -37,6 +37,17 @@ app.post('/add_book', function(req, res){
     })
 })
 
+app.get('/bookview', function(req, res){
+    Book.find({}, function(err, data){
+        if (err){
+            return res.status(400).json({msg: 'Couldn\'t fetch database'});
+        }
+        else {
+            return res.status(200).json()
+        }
+    })
+    res.render('bookView');
+})
 
 app.listen(3000, 'localhost', function(){
     console.log('server listening...')
