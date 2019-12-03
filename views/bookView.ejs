@@ -28,7 +28,7 @@
             <% books.forEach(function(item, count){ %>
                 <tr>
                 <th scope="row"><%= count+1 %></th>
-                <td><%= item._id %></td>
+                <td><a href='/book/<%= item._id %>'><%= item._id %></a></td>
                 <td><%= item.title %></td>
                 <td><%= item.title %></td>
                 <td><%= item.author %></td>

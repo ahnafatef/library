@@ -39,7 +39,8 @@
             url: '/add_book',
             data: book
             }).done(function(response){
-            console.log(response);
+              window.location.replace(`/book/${response.article._id}`)
+              console.log(response);
             }).fail(function(response){
             console.log(response);
             })

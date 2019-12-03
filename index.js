@@ -37,6 +37,16 @@ app.post('/add_book', function(req, res){
     })
 })
 
+app.get('/book/:id', function(req, res){
+    Book.find({'_.id': req.params.id}, function(err, data){
+        if (err){
+            return res.status(400).json({msg: 'book not found'});
+        }
+        console.log(data);
+        return res.status(200).json({msg: data});
+    })
+})
+
 app.get('/bookview', function(req, res){
     Book.find({}, function(err, data){
         if (err){
