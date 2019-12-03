@@ -29,10 +29,10 @@ app.post('/add_book', function(req, res){
 
     book.save(function(err, data){
         if(err){
-            return  response.status(400).json({msg: "Something went wrong"})
+            return  res.status(400).json({msg: "Something went wrong"})
         }
         else {
-            return response.status(200).json({article:data})
+            return res.status(200).json({article:data})
         }
     })
 })
